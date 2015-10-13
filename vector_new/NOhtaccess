@@ -1,0 +1,11 @@
+SSLRequireSSL # The modules only work using HTTPS
+AuthType shibboleth
+ShibRequireSession On
+ShibRequireAll On
+ShibExportAssertion Off
+
+Require valid-user
+deny from all 
+allow from .cern.ch
+
+Require ADFS_GROUP "vector-user"

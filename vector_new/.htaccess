@@ -1,0 +1,30 @@
+php_value post_max_size 128M
+php_value upload_max_filesize 128M
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+ExpiresActive On
+ExpiresByType image/png A31708800
+<FilesMatch "(?i)^.*\.(ico|flv|jpg|jpeg|png|gif|js|css)$">
+ExpiresActive On
+ExpiresDefault A31708800
+</FilesMatch>
+SSLRequireSSL # The modules only work using HTTPS
+AuthType shibboleth
+ShibRequireSession On
+ShibRequireAll On
+ShibExportAssertion Off
+
+require valid-user
+allow from all 
+allow from .cern.ch
+
+# Require group users
+# Require ADFS_GROUP "cernts-vector-users"
+
+
+
+# To validate only selected users:
+
+# Require ADFS_LOGIN "iasensi"

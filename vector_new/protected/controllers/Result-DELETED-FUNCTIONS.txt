@@ -1,0 +1,49 @@
+ /*if (isset($_POST['Result'])) {
+			//Result::model()->reset($id);//RESET all results with issueId=$id !!!!!!!!!!!!!
+            $redirect = true;
+            $post = $_POST['Result'];
+            
+			
+			if (isset($post['elementid'])) {
+                $elementId = $post['elementid'];
+                
+				
+				foreach ($elementId as $key => $value) {
+				//$keysCont++;
+                   //  $model= Result:model()->findByPk($key);
+				   //$idmodel=$keys+$keysCont;
+				   $model= Result::model()->findByPk($_POST['Result']);
+					if ($value != '') {
+                       
+						if (is_array($value)) {
+                            
+							foreach ($value as $option) {
+                                if($model->elementId!=$key || $model->issueId != $issueId ||$model->value != $keys){
+								$model = new Result;
+                                $model->elementId = $key;
+                                $model->issueId = $issueId;
+								
+                                $model->value = $keys;
+                                $model->save();
+								}
+                            }
+                        }else {
+                           $model = Result::model()->find("elementId = $key and issueId = $issueId");
+                            if ($model === null) {
+								if($model->elementId!=$key ||
+									$model->issueId != $issueId ||
+									$model->value != $keys){
+									$model = new Result;
+									$model->elementId = $key;
+									$model->issueId = $issueId;
+									}
+                            }
+                            $model->value = $todos;
+                            $model->save();
+							
+                        }
+                    }
+                }
+            }
+        }
+		*/

@@ -1,0 +1,337 @@
+/* 
+    Document   : vector.css
+    Created on : 26 juil. 2013, 10:01:26
+    Author     : mbagiell
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.red{
+    color: red;
+}
+
+.green{
+    color: #008800;
+}
+
+img{
+    max-width: 600px;
+}
+
+#columns{
+    margin: 10px 0 10px 0;
+    padding-top: 10px;
+    border-top: 1px solid gray;
+}
+
+#rows{
+    margin-top: 10px;
+}
+
+.table td,.table th {
+  border: 1px solid gray;
+  text-align: center;
+}
+.table th{
+    color: white;
+    border-color: white;
+    background: #4D94CE;
+}
+.dr,.dc{
+    cursor: pointer;
+    color: red;
+}
+
+.dr:hover,.dc:hover{
+    font-weight: bold;
+}
+
+.grey{
+    color: gray;
+}
+
+.traveler{
+    text-align: center;
+    padding: 5px;
+}
+
+.travelerTitle{
+    font-size: 20px;
+}
+
+.travelerSubTitle{
+    font-size: 16px;
+}
+
+.travelerAuthor{
+    font-size: 14px;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+#discrepancy h1{
+    text-align: center;
+}
+
+#discrepancy .info{
+    margin-bottom: 20px;
+}   
+
+#discrepancy .author{
+    font-weight: bold;
+    border-bottom: black dashed 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    font-style: italic;
+}   
+
+.border{
+    border: 1px solid black;
+    min-height: 15px;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+.big{
+    width: 80%;
+}
+.little{
+    width: 20%;
+}
+
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+
+.center{
+    text-align: center;
+}
+input[type=radio] + label, input[type=checkbox] + label { display:inline !important; }
+
+
+.list-view .items-float .view
+{       
+    width: 30%;
+    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-right: 1px;
+    float:left;   /* <--- this will make the items float */
+}
+
+.comment{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:10px 10px 10px 36px;
+    margin:10px;
+    position: relative;
+}
+.comment img{
+    max-width: 500px;
+    max-height: 250px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.comment.info{
+    background:#e3f7fc url('../images/notice.png') no-repeat 10px 50%;
+    border:1px solid #8ed9f6;
+}
+.comment.warn{
+    background:#fff8c4 url('../images/warning.png') no-repeat 10px 50%;
+    border:1px solid #f2c779;
+}
+
+.comment.error{
+    background:#ffecec url('../images/error.png') no-repeat 10px 50%;
+    border:1px solid #f5aca6;
+}
+
+.traveler-list li:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.issue-list li:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+.view{
+    word-wrap: break-word;
+}
+
+
+
+.comment:after, .comment:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.comment:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 5px;
+    left: 10%;
+    margin-left: -20px;
+}
+.comment:before {
+    border-color: rgba(180, 187, 205, 0);
+    border-bottom-color: #b4bbcd;
+    border-width: 6px;
+    left: 10%;
+    margin-left: -21px;
+}
+
+.view.empty{
+    border:2px solid red;
+}
+.view.ok{
+    border:2px solid green;
+}
+.view.half{
+    border:2px solid yellow;
+}
+.discrepancyFile{
+    height: 200px;
+    width: 200px;
+}
+
+.discrepancyFile img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.delete{
+    float:right;
+}
+.droite{
+    float: right;
+}
+.delete a{
+    color: red;
+}
+.warning{
+    color: red;
+}
+#discrepancy .rond{
+    border:1px solid black;
+    border-radius:10px;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#discrepancy .label{
+    font-style: italic;
+}
+
+#discrepancy .report{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius:10px;
+}
+
+.report .wrapper{
+    border: 1px solid black;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.wrapper .description{
+    border-top: #000 dashed 1px;
+    padding: 5px;
+}
+
+.wrapper .title{
+    background: #C9E0ED;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.wrapper .content{
+    padding: 5px;
+}
+
+.wrapper .signature{
+    border-top: dotted 1px black;
+    text-align: center;
+}
+
+#discrepancy .border{
+    margin: 0;
+}
+
+
+.sortable{
+    padding: 5px;
+    cursor: n-resize;
+}
+
+.state-sortable{
+    background: red;
+}
+
+.sortable:hover{
+    border: black dotted 1px;
+}
+
+.ui-sortable-helper{
+    background: #4D94CE;
+}
+
+.filetree span.equipment{
+    padding: 1px 0 1px 20px; display: block; 
+    background: url(../images/gear.png) 0 0 no-repeat;
+}
+.filetree span.component{
+    padding: 1px 0 1px 20px; display: block; 
+    background: url(../images/multigear.png) 0 0 no-repeat;
+}
+.filetree span.issue{
+    padding: 1px 0 1px 20px; display: block; 
+    background: url(../images/issue.png) 0 0 no-repeat;
+}
+.filetree span.template{
+    padding: 1px 0 1px 20px; display: block; 
+    background: url(../images/template.png) 0 0 no-repeat;
+}
+.filetree span.templateSet{
+    padding: 1px 0 1px 20px; display: block; 
+    background: url(../images/templateSet.png) 0 0 no-repeat;
+}
+.filetree span.project{
+    padding: 1px 0 1px 20px; display: block; 
+    background: url(../images/project.png) 0 0 no-repeat;
+}
+.filetree span.archive{
+    padding: 1px 0 1px 20px; display: block; 
+    background: url(../images/archive.png) 0 0 no-repeat;
+}
+.result{
+    padding: 5px;   
+    border: 1px solid #DDDDDD;
+    
+    /*Applying CSS3 gradient*/
+    background: -moz-linear-gradient(center top , #FFFFFF,  #EEEEEE 1px, #FFFFFF 20px);    
+    background: -webkit-gradient(linear, left top, left 20, from(#FFFFFF), color-stop(5%, #EEEEEE) to(#FFFFFF));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBFBFB', endColorstr='#FFFFFF');
+    
+    /*Applying CSS 3radius*/   
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    /*Applying CSS3 box shadow*/
+    -moz-box-shadow: 0 0 2px #DDDDDD;
+    -webkit-box-shadow: 0 0 2px #DDDDDD;
+    box-shadow: 0 0 2px #DDDDDD;
+}
