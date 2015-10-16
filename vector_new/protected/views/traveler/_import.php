@@ -2,7 +2,9 @@
 /* @var $this TravelerController */
 /* @var $form CActiveForm */
 ?>
-
+<?php 
+	//die(print_r(array_values($model->getStepImport())));
+?>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -11,10 +13,18 @@
     
 )); 
 ?>
+ 		
     <div class="row">
-       <?php if(Yii::app()->user->getState('role')>=2): ?> 
-        <?php $data = CHtml::listData($model->getStepImport(),'id','text','grouping');?>
-        <?php echo CHtml::dropDownList('stepImportForCreators','', $data,array('empty'=>"----".Yii::t('default','Select one or more Steps with Ctrl key')."----", 'multiple'=>'multiple', 'size'=>'10')); ?>
+        <?php if(Yii::app()->user->getState('role')>=2): ?> 
+        <?php $data = CHtml::listData($model->getStepImport(),'id','text','grouping');?> 
+        <?php //$data = CHtml::listData($model->getStepImport(),'stepId','stepName',"project");?>
+        <?php 
+			//die(print_r(array_values($data)));
+		?>
+        
+        <?php  echo CHtml::dropDownList('stepImportForCreators','', $data,
+        		array('empty'=>"----".Yii::t('default','Select one or more Steps with Ctrl key')."----",
+        				 'multiple'=>'multiple', 'size'=>'10'));?>
 		<?php endif ?>
 		<?php if(Yii::app()->user->getState('role')<2): ?>
 		<?php $data = CHtml::listData($model->getStepImport(),'id','text','grouping');?>
