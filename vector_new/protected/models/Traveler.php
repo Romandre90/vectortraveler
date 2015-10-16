@@ -308,7 +308,28 @@ class Traveler extends CActiveRecord {
         // Format dates based on the locale
         return Yii::app()->dateFormatter->format(Yii::app()->locale->dateFormat, $this->createTime);
     }
-    
+    /**
+     * @IDEA try query.
+     */
+//     public  function getStepImport(){
+//     	$projectId = $this->component->projectId;
+//     	$sql = "SELECT 
+//     				p.identifier AS project,
+//     				c.identifier AS component,
+//     				t.name AS traveler,
+//     				s.id AS stepId,
+//     				s.name AS stepName
+//               	FROM
+//               		traveler AS t 
+//               	INNER JOIN step AS s ON s.travelerId = t.id
+//                 INNER JOIN components  AS c ON c.id = t.componentId
+//                 INNER JOIN project AS p ON p.id = c.projectId
+//                 WHERE
+//                 	s.parentId IS NULL and t.id <> $this->id 
+//                 ORDER BY
+//     				p.identifier , c.identifier";
+//     	return Yii::app()->db->createCommand($sql)->queryAll(); 
+//     }
     public  function getStepImport(){
         $projectId = $this->component->projectId;
         $sql = "SELECT t.name AS grouping, s.id, s.name AS text
